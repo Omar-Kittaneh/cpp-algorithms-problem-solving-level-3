@@ -27,6 +27,7 @@ void PrintMatrix(int arr[3][3], short Rows, short Cols)
 }
 
 int main() {
+    srand((unsigned)time(NULL));
     int arr[3][3];
     FillMatrixWithOrderedNumbers(arr, 3, 3);
     cout << "\nThe following is a 3x3 ordered matrix:\n";

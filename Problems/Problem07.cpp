@@ -25,25 +25,28 @@ void PrintMatrix(int arr[3][3], short Rows, short Cols)
         cout << "\n";
     }
 }
-void PrintTransposeMatrix(int arr[3][3], short Rows, short Cols)
-{
+void TransposeMatrix(int arr[3][3], int arrTransposed[3][3] , short Rows, short Cols) {
     for (short i = 0; i < Rows; i++)
     {
         for (short j = 0; j < Cols; j++)
         {
-            cout << setw(3) << arr[j][i] << " ";
+            arrTransposed[i][j] = arr[j][i];
         }
-        cout << "\n";
+
     }
 }
+
 using namespace std;
 
 int main() {
+    srand((unsigned)time(NULL));
     int arr[3][3];
+    int arrTransposed[3][3];
     FillMatrixWithOrderedNumbers(arr, 3, 3);
     cout << "\nThe following is a 3x3 ordered matrix:\n";
     PrintMatrix(arr, 3, 3);
     cout << "The Following is the transposed matrix:\n";
-    PrintTransposeMatrix(arr, 3, 3);
+    TransposeMatrix(arr, arrTransposed , 3 , 3);
+    PrintMatrix( arrTransposed , 3 , 3);
     return 0;
 }
