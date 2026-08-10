@@ -32,6 +32,5 @@ int main() {
     FillMatrixWithOrderedNumbers(arr, 3, 3);
     cout << "\nThe following is a 3x3 ordered matrix:\n";
     PrintMatrix(arr, 3, 3);
-
     return 0;
 }
