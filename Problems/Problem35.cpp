@@ -14,7 +14,7 @@ void PrintOneWordOnLine(string S1) {
     string Word;
     while ((pos = S1.find(delim)) != std::string::npos) {
          Word = S1.substr(0, pos);
-        if (Word != " ") {
+        if (Word != "") {
             cout << Word << endl ;
         }
         S1.erase(0, pos + delim.length());
